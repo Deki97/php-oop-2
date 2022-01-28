@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+.single-item {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.single-item div {
+    font-size: 20px;
+}
