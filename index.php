@@ -18,7 +18,7 @@ $iphone->delivery_time = '20 days';
 
 
 // Creo un istanza della classe Laptop
-$lenovo = new Laptop('Lenovo', 999, 'Electronic', 'Intel Core i7', 16);
+$lenovo = new Laptop('Lenovo', 999, 'Electronic', 'Intel Core i7', 'Intel Iris Xe');
 $lenovo->delivery_time = '14 days';
 // var_dump($lenovo);
 
@@ -96,7 +96,7 @@ $dejan_cart = $dejan->getCart();
             </div>
         <?php } ?>
 
-        <h2>Procedi all'acquisto -></h2>
+        <h2>Proceed to purchase -></h2>
     </div>
 </body>
 </html>
