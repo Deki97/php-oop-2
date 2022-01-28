@@ -9,11 +9,10 @@ class Product {
 
     public $delivery_time;
 
-    public function __construct($_name, $_price, $_category, $_delivery_time) {
+    public function __construct($_name, $_price, $_category) {
         $this->name = $_name;
         $this->price = $_price;
         $this->category = $_category;
-        $this->delivery_time = $_delivery_time;
     }
 }
 ?>
