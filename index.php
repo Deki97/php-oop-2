@@ -95,6 +95,8 @@ $dejan_cart = $dejan->getCart();
                 <?php } ?>
             </div>
         <?php } ?>
+
+        <h2>Procedi all'acquisto -></h2>
     </div>
 </body>
 </html>

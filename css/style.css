@@ -16,6 +16,11 @@ h1 {
     margin-top: 30px;
 }
 
+h2 {
+    text-align: right;
+    cursor: pointer;
+}
+
 .single-item {
     border: 1px solid black;
     padding: 10px;
