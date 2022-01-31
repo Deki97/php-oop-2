@@ -10,6 +10,8 @@ require_once __DIR__ . '/User.php';
 // Strutturare le classi gestendo l'ereditarietà dove necessario; ad esempio ci potrebbero essere degli utenti premium che hanno diritto a degli sconti esclusivi, oppure diverse tipologie di prodotti.
 // Provate a stampare in pagina come visto questa mattina i prodotti scelti dall'utente.
 
+// Oggi pomeriggio aggiungete un trait ed una exception (con relativa gestione) all'esercizio di venerdì.
+
 
 // Creo un istanza della classe Smartphone
 $iphone = new Smartphone('Apple iPhone 13', 1299, 'Electronic', 5.8, 8);
