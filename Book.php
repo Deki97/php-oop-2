@@ -3,6 +3,7 @@
 require_once __DIR__ . '/Product.php';
 
 class Book extends Product {
+    
     public $number_of_pages;
 
     public $genre;

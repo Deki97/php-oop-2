@@ -3,6 +3,7 @@
 require_once __DIR__ . '/Product.php';
 
 class Laptop extends Product {
+    
     public $processor;
 
     public $video_card;

@@ -4,8 +4,10 @@ require_once __DIR__ . '/PurchasedProductDetails.php';
 
 class Product {
 
+    // Tramite la keyword 'use' importo la trait, in modo che ora la classe Product includerà le caratteristiche della classe PurchasedProductDetails,
+    // e in questo modo automaticamente le classi figlie che estendono la classe Product erediteranno le medesime caratteristiche
     use PurchasedProductDetails;
-    
+
     public $name;
 
     public $price;

@@ -17,26 +17,35 @@ require_once __DIR__ . '/PurchasedProductDetails.php';
 // Creo un istanza della classe Smartphone
 $iphone = new Smartphone('Apple iPhone 13', 1299, 'Electronic', 5.8, 8);
 $iphone->delivery_time = '20 days';
+
+// Variabili ereditate tramite trait (PurchasedProductDetails)
 $iphone->order_number = 'A364356U';
 $iphone->courier = 'Bartolini';
-var_dump($iphone);
+
+// var_dump($iphone);
 
 
 // Creo un istanza della classe Laptop
 $lenovo = new Laptop('Lenovo', 999, 'Electronic', 'Intel Core i7', 'Intel Iris Xe');
 $lenovo->delivery_time = '14 days';
+
+// Variabili ereditate tramite trait (PurchasedProductDetails)
 $lenovo->order_number = 'E573301P';
 $lenovo->courier = 'DHL';
-var_dump($lenovo);
+
+// var_dump($lenovo);
 
 
 // Creo un istanza della classe Book
 $greenlights = new Book('Greenlights', 19.99, 'Books', 'Autobiography', 'Matthew McConaughey');
 $greenlights->delivery_time = '5 days';
 $greenlights->number_of_pages = 320;
+
+// Variabili ereditate tramite trait (PurchasedProductDetails)
 $greenlights->order_number = 'Q773014F';
 $greenlights->courier = 'GLS';
-var_dump($greenlights);
+
+// var_dump($greenlights);
 
 
 // Creo un istanza della classe User
