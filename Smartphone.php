@@ -11,7 +11,12 @@ class Smartphone extends Product {
     public function __construct($_name, $_price, $_category, $_screen_size, $_ram) {
         parent::__construct($_name, $_price, $_category);
         $this->screen_size = $_screen_size;
-        $this->ram = $_ram;
+        
+        if(is_int($_ram)) {
+            $this->ram = $_ram;
+        } else {
+            throw new Exception ('$_ram deve essere un numero');
+        }
     }
 }
 ?>

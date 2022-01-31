@@ -15,7 +15,14 @@ require_once __DIR__ . '/PurchasedProductDetails.php';
 
 
 // Creo un istanza della classe Smartphone
-$iphone = new Smartphone('Apple iPhone 13', 1299, 'Electronic', 5.8, 8);
+try {
+    $iphone = new Smartphone('Apple iPhone 13', 1299, 'Electronic', 5.8, 8);
+} catch(Exception $e) {
+    error_log($e);
+
+    echo 'Controllare che tutti i dati siano stati passati correttamente';
+    die();
+}
 $iphone->delivery_time = '20 days';
 
 // Variabili ereditate tramite trait (PurchasedProductDetails)
