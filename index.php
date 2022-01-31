@@ -66,6 +66,7 @@ $greenlights->courier = 'GLS';
 
 
 // Creo un istanza della classe User
+// Tramite un try catch gestisco l'eccezione nel caso l'indirizzo email non contenga il simbolo '@'
 try {
     $dejan = new User('Dejan', 'Nikolic', 'dejan97@libero.it');
 } catch (Exception $e) {
