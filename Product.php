@@ -1,6 +1,11 @@
 <?php 
 
+require_once __DIR__ . '/PurchasedProductDetails.php';
+
 class Product {
+
+    use PurchasedProductDetails;
+    
     public $name;
 
     public $price;

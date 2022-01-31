@@ -3,6 +3,7 @@
 require_once __DIR__ . '/Product.php';
 
 class Smartphone extends Product {
+
     public $screen_size;
 
     public $ram;
