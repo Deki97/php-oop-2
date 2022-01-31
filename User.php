@@ -1,7 +1,7 @@
 <?php 
 
 class User {
-    
+
     public $name;
 
     public $lastname;
@@ -15,7 +15,12 @@ class User {
     public function __construct($_name, $_lastname, $_email) {
         $this->name = $_name;
         $this->lastname = $_lastname;
-        $this->email = $_email;
+        
+        if(strpos($_email, '@')) {
+            $this->email = $_email;
+        } else {
+            throw new Exception ('La mail deve contenere la chiocciola');
+        }
     }
 
     // Metodo che ritorna nome e cognome completi dell'utente

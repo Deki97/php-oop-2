@@ -15,6 +15,8 @@ require_once __DIR__ . '/PurchasedProductDetails.php';
 
 
 // Creo un istanza della classe Smartphone
+// Tramite un try catch gestisco l'eccezione in caso uno dei parametri passati non sia corretto o in formato errato
+// Per esempio in questo caso se passo la ram come stringa invece di numero intero, stamperò un errore e interrompo il programma
 try {
     $iphone = new Smartphone('Apple iPhone 13', 1299, 'Electronic', 5.8, 8);
 } catch(Exception $e) {
@@ -33,7 +35,15 @@ $iphone->courier = 'Bartolini';
 
 
 // Creo un istanza della classe Laptop
-$lenovo = new Laptop('Lenovo', 999, 'Electronic', 'Intel Core i7', 'Intel Iris Xe');
+// Tramite un try catch gestisco l'eccezione in caso uno dei parametri passati non sia corretto o in formato errato
+try {
+    $lenovo = new Laptop('Lenovo', 999, 'Electronic', 'Intel Core i7', 'Intel Iris Xe');
+} catch (Exception $e) {
+    error_log($e);
+
+    echo 'Controllare che tutti i dati siano stati passati correttamente';
+    die();
+}
 $lenovo->delivery_time = '14 days';
 
 // Variabili ereditate tramite trait (PurchasedProductDetails)
@@ -56,7 +66,13 @@ $greenlights->courier = 'GLS';
 
 
 // Creo un istanza della classe User
-$dejan = new User('Dejan', 'Nikolic', 'dejan97@libero.it');
+try {
+    $dejan = new User('Dejan', 'Nikolic', 'dejan97@libero.it');
+} catch (Exception $e) {
+    error_log($e);
+
+    echo 'Chiocciola mancante nella email';
+}
 $dejan->addItem($iphone);
 $dejan->addItem($lenovo);
 $dejan->addItem($greenlights);
